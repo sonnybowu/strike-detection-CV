@@ -166,7 +166,6 @@ for epoch in range(30):
 # Save model after training
 torch.save(model.state_dict(), 'tcn_action_model.pth')
 
-# --- Load your trained TCN model ---
 tcn_model = TCN(input_dim=34, num_classes=3)
 tcn_model.load_state_dict(torch.load('tcn_action_model.pth'))
 tcn_model.eval()
